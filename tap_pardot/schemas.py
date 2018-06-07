@@ -6,6 +6,7 @@ from singer import utils
 
 class IDS(object):
     VISITOR_ACTIVITY = 'visitor_activity'
+    PROSPECT = 'prospect'
 
 
 stream_ids = [getattr(IDS, x) for x in dir(IDS)
@@ -13,6 +14,7 @@ stream_ids = [getattr(IDS, x) for x in dir(IDS)
 
 PK_FIELDS = {
     IDS.VISITOR_ACTIVITY: ['id'],
+    IDS.PROSPECT: ['id'],
 }
 
 

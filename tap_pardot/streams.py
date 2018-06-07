@@ -20,6 +20,7 @@ def write_records(tap_stream_id, records):
 
 class BOOK(object):
     VISITOR_ACTIVITY = [IDS.VISITOR_ACTIVITY, 'created_at']
+    PROSPECT = [IDS.PROSPECT, 'updated_at']
 
     @classmethod
     def return_bookmark_path(cls, stream):
@@ -93,9 +94,8 @@ def call_stream_incremental(context, stream):
                 return
 
             # results ordered by date ascending
-            # most_recent_record_date = format_record_to_state_date(
-                # response[stream][0]['created_at'])
-            most_recent_record_date = response[stream][0]['created_at']
+            time_key  = BOOK.return_bookmark_path(stream)[1]
+            most_recent_record_date = response[stream][0][time_key]
 
         data = response[stream]
         write_records(stream, data)

@@ -29,9 +29,17 @@ class Client(object):
         # we need to explicitly exclude these in our query
         stream_mapping = {
             'visitor_activity': self.pardot_client.visitoractivities,
+            'prospect': self.pardot_client.prospects
         }
-        return stream_mapping[stream].query(created_after=date,
-                                            created_before=self.now_string,
-                                            offset=offset,
-                                            sort_by='created_at',
-                                            sort_order='descending')
+        if stream == 'visitor_activiy':
+            return stream_mapping[stream].query(created_after=date,
+                                                created_before=self.now_string,
+                                                offset=offset,
+                                                sort_by='created_at',
+                                                sort_order='descending')
+        elif stream == 'prospect':
+            return stream_mapping[stream].query(updated_after=date,
+                                                updated_before=self.now_string,
+                                                offset=offset,
+                                                sort_by='updated_at',
+                                                sort_order='descending')

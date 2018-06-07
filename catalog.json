@@ -1,15 +1,25 @@
 {
   "streams": [
     {
+      "tap_stream_id": "prospect",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "inclusion": "automatic",
+        "type": "object",
+        "selected": "true"
+      },
+      "stream": "prospect"
+    },
+    {
       "tap_stream_id": "visitor_activity",
       "key_properties": [
         "id"
       ],
       "schema": {
-        "properties": {},
         "inclusion": "automatic",
-        "type": "object",
-        "selected": "true"
+        "type": "object"
       },
       "stream": "visitor_activity"
     }
