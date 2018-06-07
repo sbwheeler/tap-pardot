@@ -31,7 +31,7 @@ class Client(object):
             'visitor_activity': self.pardot_client.visitoractivities,
             'prospect': self.pardot_client.prospects
         }
-        if stream == 'visitor_activiy':
+        if stream == 'visitor_activity':
             return stream_mapping[stream].query(created_after=date,
                                                 created_before=self.now_string,
                                                 offset=offset,
