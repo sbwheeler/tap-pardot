@@ -6,7 +6,7 @@ from . import streams as streams_
 from .context import Context
 from . import schemas
 
-REQUIRED_CONFIG_KEYS = ["start_date", "username", "password", "user_key"]
+REQUIRED_CONFIG_KEYS = ["start_date", "email", "password", "user_key"]
 LOGGER = singer.get_logger()
 
 

@@ -13,14 +13,14 @@ def _join(a, b):
 
 class Client(object):
     def __init__(self, config):
-        self.username = config.get('username')
+        self.email = config.get('email')
         self.password = config.get('password')
         self.user_key = config.get('user_key')
         self.pardot_client = self._auth_pardot_client()
         self.now_string = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     def _auth_pardot_client(self):
-        return PardotAPI(email=self.username,
+        return PardotAPI(email=self.email,
                          password=self.password,
                          user_key=self.user_key)
 
