@@ -89,6 +89,8 @@ def call_stream_incremental(context, stream):
                             total=response['total_results']
                         ))
             total_records = response['total_results']
+            if total_records == 0:
+                return
 
             # results ordered by date ascending
             # most_recent_record_date = format_record_to_state_date(
