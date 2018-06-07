@@ -1,0 +1,17 @@
+{
+  "streams": [
+    {
+      "tap_stream_id": "visitor_activity",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {},
+        "inclusion": "automatic",
+        "type": "object",
+        "selected": "true"
+      },
+      "stream": "visitor_activity"
+    }
+  ]
+}
