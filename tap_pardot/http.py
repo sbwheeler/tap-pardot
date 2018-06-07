@@ -32,4 +32,6 @@ class Client(object):
         }
         return stream_mapping[stream].query(created_after=date,
                                             created_before=self.now_string,
-                                            offset=offset)
+                                            offset=offset,
+                                            sort_by='created_at',
+                                            sort_order='descending')
