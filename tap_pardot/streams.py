@@ -58,15 +58,6 @@ def sync(context):
             bk = call_stream_incremental(context, stream)
             save_state(context, stream, bk)
 
-
-def call_stream_full(context, stream):
-    response = context.client.GET(stream='campaigns')
-    records_to_write = json.loads(response.content)
-    write_records(stream, records_to_write)
-
-    context.save_campaigns_meta(records_to_write)
-
-
 def call_stream_incremental(context, stream):
     context.update_start_date_bookmark(BOOK.return_bookmark_path(stream))
     last_updated = context.get_bookmark(BOOK.return_bookmark_path(stream))
