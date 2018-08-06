@@ -35,7 +35,8 @@
     },
     "grade": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "crm_owner_fid": {
@@ -93,7 +94,8 @@
     },
     "crm_account_fid": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "crm_lead_fid": {
@@ -121,12 +123,14 @@
     },
     "comments": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "address_two": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "source": {
@@ -149,7 +153,8 @@
     },
     "notes": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "recent_interaction": {
@@ -166,7 +171,8 @@
     },
     "territory": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "email": {
@@ -189,12 +195,14 @@
     },
     "fax": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "address_one": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "crm_url": {
@@ -242,12 +250,14 @@
     },
     "is_starred": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "password": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "last_activity_at": {
@@ -270,7 +280,8 @@
     },
     "employees": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "opted_out": {
@@ -281,7 +292,8 @@
     },
     "annual_revenue": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "Created_Date": {
