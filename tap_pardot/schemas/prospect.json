@@ -104,7 +104,8 @@
     },
     "zip": {
       "type": [
-        "null"
+        "null",
+        "integer"
       ]
     },
     "is_do_not_call": {
