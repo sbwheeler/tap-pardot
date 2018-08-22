@@ -22,6 +22,10 @@ def get_abs_path(path):
     return os.path.join(os.path.dirname(os.path.realpath(__file__)), path)
 
 
+def load_schema(tap_stream_id):
+    path = "schemas/{}.json".format(tap_stream_id)
+    return utils.load_json(get_abs_path(path))
+
 def get_stream_from_catalog(stream_id, catalog):
     streams = catalog['streams']
     for s in streams:
