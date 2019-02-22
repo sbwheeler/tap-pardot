@@ -17,6 +17,7 @@ class Client(object):
         self.password = config.get('password')
         self.user_key = config.get('user_key')
         self.pardot_client = self._auth_pardot_client()
+        self.pardot_client.authenticate()
         self.now_string = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     def _auth_pardot_client(self):
