@@ -44,8 +44,8 @@ def main():
         discover(ctx).dump()
         print()
     else:
-        ctx.catalog = args.catalog \
-            if args.catalog else discover(ctx)
+        ctx.catalog = Catalog.from_dict(args.properties) \
+            if args.properties else discover(ctx)
         sync(ctx)
 
 
