@@ -126,7 +126,8 @@
     "fax": {
       "type": [
         "null",
-        "string"
+        "string",
+        "integer"
       ]
     },
     "source": {
