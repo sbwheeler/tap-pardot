@@ -590,7 +590,8 @@
             },
             "job_title": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             }
           }
